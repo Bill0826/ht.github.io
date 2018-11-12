@@ -1,1 +1,14 @@
 <p>导出csv文件数字会自动变科学计数法的解决方法解决办法：数字后面添加"\t"制表符</p>
+
+<h1>es按指定条件删除数据</h1>
+<p>
+  curl -XDELETE 'hotst:9200/index/type/_query' -d '{
+  "query": {
+    "range": {
+      "timeLastUpdate": {
+        "lte": 1539792000
+      }
+    }
+  }
+}'
+</p>
